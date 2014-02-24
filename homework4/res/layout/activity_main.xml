@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/amount_btc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount of \nBitcoin to convert" />
+
+    <EditText
+        android:id="@+id/entered_amount_btc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/amount_btc"
+        android:hint="Enter amount of Bitcoin to convert" />
+
+    <TextView
+        android:id="@+id/amount_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/amount_btc"
+        android:layout_marginTop="20dip"
+        android:text="Currency to convert to \n (i.e. USD, EUR, CAD, JPY)" />
+
+    <EditText
+        android:id="@+id/entered_amount_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entered_amount_btc"
+        android:layout_marginTop="10dip"
+        android:layout_toRightOf="@+id/amount_currency"
+        android:hint="Enter currency to convert to" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/amount_currency"
+        android:layout_marginTop="5dip"
+        android:onClick="onClick"
+        android:text="Start scrape" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_below="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+    <TextView
+        android:id="@+id/currency_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image1"
+        android:text="Enter Currency " />
+
+    <EditText
+        android:id="@+id/currency_editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image1"
+        android:layout_toRightOf="@+id/currency_textView"
+        android:ems="10"
+        android:hint="USD, EUR, CAD ..." >
+    </EditText>
+
+    <TextView
+        android:id="@+id/exchange_select_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currency_editText"
+        android:text="Select Exchange: " />
+
+    <RadioGroup
+        android:id="@+id/group1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exchange_select_tv"
+        android:orientation="vertical" >
+
+        <RadioButton
+            android:id="@+id/BlockChain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="BlockChain" />
+
+        <RadioButton
+            android:id="@+id/MtGox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Mt. Gox" />
+
+        <RadioButton
+            android:id="@+id/CoinBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="CoinBase" />
+
+        <RadioButton
+            android:id="@+id/BitPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="BitPay" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/group1"
+        android:onClick="onClick2"
+        android:text="GO!" />
+
+</RelativeLayout>

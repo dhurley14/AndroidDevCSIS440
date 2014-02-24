@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#000000">
+
+    <TextView
+        android:id="@+id/def"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/task"
+        android:layout_below="@+id/task"
+        android:layout_marginTop="110dp"
+        android:text="Alert if Greater Than:"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/def"
+        android:layout_below="@+id/def"
+        android:layout_marginTop="69dp"
+        android:background="#924420"
+        android:textColor="#FFFFFF"
+        android:text="Delete Card" />
+
+    <TextView
+        android:id="@+id/task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="52dp"
+        android:text="Alert if Less Than:"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/editTextGreater"
+        android:layout_width="70sp"
+        android:layout_height="30sp"
+        android:layout_above="@+id/def"
+        android:layout_marginLeft="19dp"
+        android:layout_toRightOf="@+id/task"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/EditTextLess"
+        android:layout_width="70sp"
+        android:layout_height="30sp"
+        android:layout_alignBaseline="@+id/def"
+        android:layout_alignBottom="@+id/def"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignLeft="@+id/EditTextLess"
+        android:background="#924420"
+        android:text="Submit"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
